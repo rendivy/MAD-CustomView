@@ -8,11 +8,9 @@ import android.graphics.Paint
 import android.graphics.Path
 import android.graphics.PorterDuff
 import android.graphics.PorterDuffColorFilter
-import android.os.Build.VERSION_CODES.R
 import android.util.AttributeSet
 import android.view.View
 import android.view.animation.AccelerateDecelerateInterpolator
-import com.google.android.material.color.MaterialColors
 import com.keyinc.customview.R
 import kotlin.math.min
 
