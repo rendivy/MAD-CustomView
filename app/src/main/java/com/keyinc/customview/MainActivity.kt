@@ -7,6 +7,7 @@ import com.keyinc.customview.customView.CustomView
 import com.keyinc.customview.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,12 +26,12 @@ class MainActivity : AppCompatActivity() {
         }
         var isOn = true
         binding.disable.setOnClickListener {
-            if (isOn) {
+            isOn = if (isOn) {
                 binding.customView.turnOff()
-                isOn = false
+                false
             } else {
                 binding.customView.turnOn()
-                isOn = true
+                true
             }
         }
     }

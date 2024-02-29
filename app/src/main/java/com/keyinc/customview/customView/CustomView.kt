@@ -8,6 +8,7 @@ import android.graphics.Paint
 import android.graphics.Path
 import android.graphics.PorterDuff
 import android.graphics.PorterDuffColorFilter
+import android.os.Build.VERSION_CODES.R
 import android.util.AttributeSet
 import android.view.View
 import android.view.animation.AccelerateDecelerateInterpolator
@@ -60,7 +61,7 @@ class CustomView @JvmOverloads constructor(context: Context, attrs: AttributeSet
     }
 
     fun turnOn() {
-        state = CustomViewState.LOW
+        state = CustomViewState.MEDIUM
     }
 
     fun increaseValue() {
@@ -76,7 +77,10 @@ class CustomView @JvmOverloads constructor(context: Context, attrs: AttributeSet
             }
 
             CustomViewState.HIGH -> {}
-            CustomViewState.DISABLED -> {}
+            CustomViewState.DISABLED -> {
+                state = CustomViewState.LOW
+                animateArrow(300f)
+            }
         }
     }
 
@@ -93,7 +97,10 @@ class CustomView @JvmOverloads constructor(context: Context, attrs: AttributeSet
                 animateArrow(360f)
             }
 
-            CustomViewState.DISABLED -> {}
+            CustomViewState.DISABLED -> {
+                state = CustomViewState.HIGH
+                animateArrow(360f)
+            }
         }
     }
 
