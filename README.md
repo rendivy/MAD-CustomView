@@ -8,9 +8,10 @@
 - При нажатии на кнопку "Отключить" значение счетчика сбрасывается, при повторном нажатии счетчик опять включается
 
 ### Реализовано:
-
+<p>
 <img src="screenshot/1.png" width="200dp">
 <img src="screenshot/2.png" width="200dp">
 <img src="screenshot/3.png" width="200dp">
 <img src="screenshot/4.png" width="200dp">
+</p>
 
