@@ -14,6 +14,9 @@ import android.view.animation.AccelerateDecelerateInterpolator
 import com.keyinc.customview.R
 import kotlin.math.min
 
+enum class CustomViewState {
+    LOW, MEDIUM, HIGH, DISABLED
+}
 
 //todo разобраться зачем она аннотирует @JvmOverloads под коробкой
 class CustomView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) :
